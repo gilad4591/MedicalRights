@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluro/fluro.dart';
-import 'package:medical_rights/presentation/main_page.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key key}) : super(key: key);
@@ -15,101 +13,151 @@ class AppDrawer extends StatelessWidget {
             children: [
               AppBar(
                 title: Text(
-                  "Text",
+                  "תפריט ניווט",
                   style: Theme.of(context).textTheme.headline3,
                 ),
               ),
-              Divider(
-                color: Colors.white,
+              SizedBox(
+                height: 20,
               ),
-              ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'דף הבית',
-                      style: Theme.of(context).textTheme.headline4,
+              Container(
+                height: MediaQuery.of(context).size.height * 0.2,
+                width: MediaQuery.of(context).size.width * 0.2,
+                // color: Theme.of(context).primaryColor,
+                child: Container(
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    // border: Border.all(color: Theme.of(context).primaryColor),
+                    image: DecorationImage(
+                      image: AssetImage('lib/assets/circleLogo.png'),
                     ),
-                  ],
+                  ),
                 ),
-                onTap: () {
-                  Navigator.pushNamed(context, '/', arguments: null);
-                },
               ),
-              Divider(
-                color: Colors.white,
+              SizedBox(
+                height: 20,
               ),
-              ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'עיוורים ולקויי ראייה',
-                      style: Theme.of(context).textTheme.headline4,
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Theme.of(context).primaryColor,
+                child: ListTile(
+                  title: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: Text(
+                            'דף הבית',
+                            style: Theme.of(context).textTheme.headline4,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/', arguments: null);
+                  },
                 ),
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/visuallyimpaired',
-                    arguments: null,
-                  );
-                },
               ),
-              Divider(
-                color: Colors.white,
-              ),
-              ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'חירשים וכבדי שמיעה',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                  ],
+              // Divider(
+              //   color: Colors.white,
+              // ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/hearingimpaired',
-                    arguments: null,
-                  );
-                },
-              ),
-              Divider(
-                color: Colors.white,
-              ),
-              ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'דף הבית',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                  ],
+                color: Theme.of(context).primaryColor,
+                child: ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'עיוורים ולקויי ראייה',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/visuallyimpaired',
+                      arguments: null,
+                    );
+                  },
                 ),
-                onTap: () {},
               ),
-              Divider(
-                color: Colors.white,
-              ),
-              ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'דף הבית',
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                  ],
+              // Divider(
+              //   color: Colors.white,
+              // ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
-                onTap: () {},
+                color: Theme.of(context).primaryColor,
+                child: ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'חירשים וכבדי שמיעה',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/hearingimpaired',
+                      arguments: null,
+                    );
+                  },
+                ),
               ),
-              Divider(
-                color: Colors.white,
+              // Divider(
+              //   color: Colors.white,
+              // ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Theme.of(context).primaryColor,
+                child: ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'טקסט',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                    ],
+                  ),
+                  onTap: () {},
+                ),
+              ),
+              // Divider(
+              //   color: Colors.white,
+              // ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                color: Theme.of(context).primaryColor,
+                child: ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'טקסט',
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                    ],
+                  ),
+                  onTap: () {},
+                ),
               ),
             ],
           ),

@@ -25,8 +25,8 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       onGenerateRoute: Flurorouter.router.generator,
       theme: ThemeData(
-        primaryColor: Colors.cyan[900],
-        accentColor: Colors.grey[800],
+        primaryColor: Colors.blueGrey[900],
+        accentColor: Colors.cyan[900],
         textTheme: TextTheme(
           headline1: TextStyle(
               fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),
