@@ -8,6 +8,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 100,
         backgroundColor: Theme.of(context).primaryColor,
         title: Text("מידע על זכויות רפואיות",
             style: Theme.of(context).textTheme.headline3),

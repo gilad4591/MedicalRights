@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.medical_rights">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="medical_rights"
         android:icon="@mipmap/ic_launcher">
