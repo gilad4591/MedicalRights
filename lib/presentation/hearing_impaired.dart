@@ -84,6 +84,15 @@ class HearingImpaired extends StatelessWidget {
                                   width:
                                       MediaQuery.of(context).size.width * 0.05,
                                   decoration: BoxDecoration(
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.5),
+                                        spreadRadius: 1,
+                                        blurRadius: 3,
+                                        offset: Offset(
+                                            0, 0), // changes position of shadow
+                                      ),
+                                    ],
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(20)),
                                     gradient: LinearGradient(

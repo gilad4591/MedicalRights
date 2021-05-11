@@ -60,23 +60,23 @@ class ButtonMain extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.1,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xFF3383CD),
-            Theme.of(context).accentColor,
-            // Colors.black,
-          ],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black,
-            spreadRadius: 1,
-            blurRadius: 5,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ],
+        // gradient: LinearGradient(
+        // begin: Alignment.topLeft,
+        // end: Alignment.bottomRight,
+        // colors: [
+        // Color(0xFF3383CD),
+        // Theme.of(context).accentColor,
+        // Colors.black,
+        // ],
+        // ),
+        // boxShadow: [
+        // BoxShadow(
+        // color: Colors.black,
+        // spreadRadius: 1,
+        // blurRadius: 5,
+        // offset: Offset(0, 3), // changes position of shadow
+        // ),
+        // ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -84,8 +84,17 @@ class ButtonMain extends StatelessWidget {
         children: [
           Text(
             textButton,
-            style:
-                TextStyle(color: Colors.blue[900], fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Colors.blue[900],
+              // fontWeight: FontWeight.bold,
+              shadows: <Shadow>[
+                Shadow(
+                  offset: Offset(0.0, 0.0),
+                  blurRadius: 5.0,
+                  color: Colors.white,
+                ),
+              ],
+            ),
           ),
         ],
       ),
