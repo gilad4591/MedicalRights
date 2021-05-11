@@ -1,7 +1,9 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_rights/presentation/dev_impaired.dart';
 import 'package:medical_rights/presentation/hearing_impaired.dart';
 import 'package:medical_rights/presentation/main_page.dart';
+import 'package:medical_rights/presentation/motorical_impaired.dart';
 import 'package:medical_rights/presentation/visually_impaired.dart';
 
 class Flurorouter {
@@ -19,6 +21,14 @@ class Flurorouter {
     handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
         HearingImpaired(),
   );
+  static Handler _motoricalHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        MotoricalImpaired(),
+  );
+  static Handler _devHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) =>
+        DevImpaired(),
+  );
 
   // ok its all set now .....
   // now lets have a handler for passing parameter tooo....
@@ -27,5 +37,7 @@ class Flurorouter {
     router.define('/', handler: _mainHandler);
     router.define('/visuallyimpaired', handler: _visualHandler);
     router.define('/hearingimpaired', handler: _hearHandler);
+    router.define('/motoricalimpaired', handler: _motoricalHandler);
+    router.define('/devimpaired', handler: _devHandler);
   }
 }

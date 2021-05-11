@@ -12,11 +12,11 @@ class AppDrawer extends StatelessWidget {
           child: Column(
             children: [
               AppBar(
-                title: Text(
-                  "תפריט ניווט",
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-              ),
+                  // title: Text(
+                  //   "תפריט ניווט",
+                  //   style: Theme.of(context).textTheme.headline3,
+                  // ),
+                  ),
               SizedBox(
                 height: 20,
               ),

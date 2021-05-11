@@ -6,37 +6,35 @@ import 'package:medical_rights/models/Data.dart';
 import 'package:flutter/material.dart';
 import 'package:medical_rights/widgets/row_app_bar.dart';
 
-class VisuallyImpaired extends StatefulWidget {
-  const VisuallyImpaired({Key key}) : super(key: key);
+class DevImpaired extends StatefulWidget {
+  const DevImpaired({Key key}) : super(key: key);
 
   @override
-  _VisuallyImpairedState createState() => _VisuallyImpairedState();
+  _DevImpairedState createState() => _DevImpairedState();
 }
 
 List<Data> list = [
-  Data('גמלת ילד נכה לעיוורים ולקויי ראייה',
-      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%99%D7%9C%D7%93_%D7%A0%D7%9B%D7%94_%D7%9C%D7%A2%D7%99%D7%95%D7%95%D7%A8%D7%99%D7%9D_%D7%95%D7%9C%D7%A7%D7%95%D7%99%D7%99_%D7%A8%D7%90%D7%99%D7%99%D7%94'),
+  Data('גמלת ילד נכה לתינוקות ופעוטות עם רמת תפקוד נמוכה',
+      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%99%D7%9C%D7%93_%D7%A0%D7%9B%D7%94_%D7%9C%D7%AA%D7%99%D7%A0%D7%95%D7%A7%D7%95%D7%AA_%D7%95%D7%A4%D7%A2%D7%95%D7%98%D7%95%D7%AA_%D7%A2%D7%9D_%D7%A8%D7%9E%D7%AA_%D7%AA%D7%A4%D7%A7%D7%95%D7%93_%D7%A0%D7%9E%D7%95%D7%9B%D7%94'),
+  Data('גמלת ילד נכה לילדים עם מוגבלות שכלית',
+      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%99%D7%9C%D7%93_%D7%A0%D7%9B%D7%94_%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA_%D7%A9%D7%9B%D7%9C%D7%99%D7%AA_%D7%94%D7%AA%D7%A4%D7%AA%D7%97%D7%95%D7%AA%D7%99%D7%AA'),
+  Data('גמלת ילד נכה לילדים עם תסמונת דאון',
+      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%99%D7%9C%D7%93_%D7%A0%D7%9B%D7%94_%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D_%D7%A2%D7%9D_%D7%AA%D7%A1%D7%9E%D7%95%D7%A0%D7%AA_%D7%93%D7%90%D7%95%D7%9F'),
+  Data('גמלת ילד נכה והטבות נלוות',
+      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%99%D7%9C%D7%93_%D7%A0%D7%9B%D7%94_%D7%95%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%A0%D7%9C%D7%95%D7%95%D7%AA'),
   Data('קצבת נכות והטבות נלוות',
       'https://www.kolzchut.org.il/he/%D7%A7%D7%A6%D7%91%D7%AA_%D7%A0%D7%9B%D7%95%D7%AA_%D7%95%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%A0%D7%9C%D7%95%D7%95%D7%AA'),
   Data('קצבת שירותים מיוחדים והטבות נלוות',
       'https://www.kolzchut.org.il/he/%D7%A7%D7%A6%D7%91%D7%AA_%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D_%D7%95%D7%94%D7%98%D7%91%D7%95%D7%AA_%D7%A0%D7%9C%D7%95%D7%95%D7%AA'),
-  Data('מבחן לבדיקת זכאות לקצבה לשירותים מיוחדים - IADL',
+  Data('מבחן IADL לבדיקת זכאות לקצבה לשירותים מיוחדים',
       'https://www.kolzchut.org.il/he/%D7%9E%D7%91%D7%97%D7%9F_IADL_%D7%9C%D7%91%D7%93%D7%99%D7%A7%D7%AA_%D7%96%D7%9B%D7%90%D7%95%D7%AA_%D7%9C%D7%A7%D7%A6%D7%91%D7%94_%D7%9C%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D_%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D'),
-  Data('קצבה לאחזקת כלב נחייה',
-      'https://www.kolzchut.org.il/he/%D7%A7%D7%A6%D7%91%D7%94_%D7%9C%D7%90%D7%97%D7%96%D7%A7%D7%AA_%D7%9B%D7%9C%D7%91_%D7%A0%D7%97%D7%99%D7%99%D7%94'),
-  Data('דמי ליווי',
-      'https://www.kolzchut.org.il/he/%D7%93%D7%9E%D7%99_%D7%9C%D7%99%D7%95%D7%95%D7%99_%D7%9C%D7%A2%D7%99%D7%95%D7%95%D7%A8%D7%99%D7%9D_%D7%95%D7%9C%D7%A7%D7%95%D7%99%D7%99_%D7%A8%D7%90%D7%99%D7%99%D7%94'),
+  Data('גמלת ניידות',
+      'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%A0%D7%99%D7%99%D7%93%D7%95%D7%AA'),
   Data('גמלת סיעוד',
       'https://www.kolzchut.org.il/he/%D7%92%D7%9E%D7%9C%D7%AA_%D7%A1%D7%99%D7%A2%D7%95%D7%93'),
-  Data(' פטור מבדיקת תלות (ADL) לגמלת סיעוד לעיוור המתגורר לבד',
-      'https://www.kolzchut.org.il/he/%D7%9E%D7%A1%D7%9C%D7%95%D7%9C_%D7%9E%D7%94%D7%99%D7%A8_%D7%9C%D7%9C%D7%90_%D7%91%D7%93%D7%99%D7%A7%D7%AA_%D7%AA%D7%9C%D7%95%D7%AA_(ADL)_%D7%91%D7%AA%D7%91%D7%99%D7%A2%D7%94_%D7%9C%D7%92%D7%9E%D7%9C%D7%AA_%D7%A1%D7%99%D7%A2%D7%95%D7%93'),
-  Data('תשלום הבטחת קיום לעולים עיוורים',
-      'https://www.kolzchut.org.il/he/%D7%AA%D7%A9%D7%9C%D7%95%D7%9D_%D7%94%D7%91%D7%98%D7%97%D7%AA_%D7%A7%D7%99%D7%95%D7%9D_%D7%9C%D7%A2%D7%95%D7%9C%D7%99%D7%9D_%D7%A2%D7%9D_%D7%9E%D7%95%D7%92%D7%91%D7%9C%D7%95%D7%AA,_%D7%A0%D7%9B%D7%95%D7%AA_%D7%90%D7%95_%D7%A2%D7%99%D7%95%D7%95%D7%A8%D7%95%D7%9F'),
-  Data('ביטוח מחלות קשות במסגרת ביטוח בריאות פרטי',
-      'https://www.kolzchut.org.il/he/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%9E%D7%97%D7%9C%D7%95%D7%AA_%D7%A7%D7%A9%D7%95%D7%AA_%D7%91%D7%9E%D7%A1%D7%92%D7%A8%D7%AA_%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA_%D7%A4%D7%A8%D7%98%D7%99'),
 ];
 
-class _VisuallyImpairedState extends State<VisuallyImpaired> {
+class _DevImpairedState extends State<DevImpaired> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +54,7 @@ class _VisuallyImpairedState extends State<VisuallyImpaired> {
                         style: Theme.of(context).textTheme.headline1,
                       ),
                       Text(
-                        "עיוורים ולקויי ראייה",
+                        "מוגבלות שכלית התפתחותית",
                         style: Theme.of(context).textTheme.headline1,
                       ),
                     ],
@@ -87,7 +85,7 @@ class _VisuallyImpairedState extends State<VisuallyImpaired> {
                             crossAxisCount: 4,
                             childAspectRatio: 2.5,
                           ),
-                          itemCount: 10,
+                          itemCount: list.length,
                           itemBuilder: (context, i) {
                             //creating the list for the grid
                             return new GridTile(
@@ -122,7 +120,7 @@ class _VisuallyImpairedState extends State<VisuallyImpaired> {
                                       MaterialPageRoute(
                                         builder: (BuildContext context) =>
                                             CustomWebView(list[i].name,
-                                                'עיוורים ולקויי ראייה'),
+                                                'מוגבלות שכלית התפתחותית'),
                                       ),
                                     );
                                   },

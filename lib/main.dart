@@ -25,17 +25,23 @@ class _MyAppState extends State<MyApp> {
       initialRoute: '/',
       onGenerateRoute: Flurorouter.router.generator,
       theme: ThemeData(
-        primaryColor: Colors.blueGrey[900],
-        accentColor: Colors.cyan[900],
+        primaryColor: Colors.blue[300],
+        accentColor: Colors.white,
         textTheme: TextTheme(
           headline1: TextStyle(
-              fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 48,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue[900]),
           headline2: TextStyle(
               fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
           headline3: TextStyle(
               fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
-          headline4: TextStyle(fontSize: 16, color: Colors.white),
+          headline4: TextStyle(fontSize: 16, color: Colors.blue[900]),
           bodyText1: TextStyle(fontSize: 14, color: Colors.white),
+          bodyText2: TextStyle(
+              fontSize: 16,
+              color: Colors.blue[900],
+              fontWeight: FontWeight.bold),
         ),
       ),
     );
