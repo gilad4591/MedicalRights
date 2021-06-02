@@ -48,7 +48,7 @@ class _MotoricalImpairedState extends State<MotoricalImpaired> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Theme.of(context).accentColor,
+          color: Colors.white,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -113,14 +113,15 @@ class _MotoricalImpairedState extends State<MotoricalImpaired> {
                                   ],
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20)),
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.blue[700],
-                                      Colors.blue[200],
-                                    ],
-                                  ),
+                                  // gradient: LinearGradient(
+                                  //   begin: Alignment.topCenter,
+                                  //   end: Alignment.bottomCenter,
+                                  //   colors: [
+                                  //     Colors.blue[700],
+                                  //     Colors.blue[200],
+                                  //   ],
+                                  // ),
+                                  color: Theme.of(context).accentColor,
                                 ),
                                 child: InkWell(
                                   child: Center(
@@ -154,23 +155,29 @@ class _MotoricalImpairedState extends State<MotoricalImpaired> {
         ),
       ),
       appBar: AppBar(
+        leadingWidth: 100,
+        leading: Center(
+          child: Container(
+            color: Theme.of(context).accentColor,
+            width: 100,
+            child: Center(
+                child: Text(
+              "זכויות רפואיות",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+              textAlign: TextAlign.center,
+            )),
+          ),
+        ),
         toolbarHeight: 100,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            // border: Border.all(
-            //   color: Colors.black,
-            // ),
-            color: Colors.white,
-            gradient: LinearGradient(
-              begin: FractionalOffset.topCenter,
-              end: FractionalOffset.bottomCenter,
-              colors: [
-                Colors.blue,
-                Colors.white,
-              ],
-              stops: [0.0, 1.0],
-            ),
-          ),
+              // border: Border.all(
+              //   color: Colors.black,
+              // ),
+              ),
         ),
         backgroundColor: Theme.of(context).primaryColor,
         title: RowAppBar(),

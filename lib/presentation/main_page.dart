@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:medical_rights/models/Scale.dart';
 import 'package:medical_rights/widgets/row_app_bar.dart';
+
+Scale scale;
 
 class MainPage extends StatelessWidget {
   const MainPage({Key key}) : super(key: key);
@@ -8,21 +11,37 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 100,
+        leading: Center(
+          child: Container(
+            color: Theme.of(context).accentColor,
+            width: 100,
+            child: Center(
+                child: Text(
+              "זכויות רפואיות",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+              textAlign: TextAlign.center,
+            )),
+          ),
+        ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             // border: Border.all(
             //   color: Colors.black,
             // ),
-            color: Colors.white,
-            gradient: LinearGradient(
-              begin: FractionalOffset.topCenter,
-              end: FractionalOffset.bottomCenter,
-              colors: [
-                Colors.blue,
-                Colors.white,
-              ],
-              stops: [0.0, 1.0],
-            ),
+            color: Theme.of(context).primaryColor,
+            // gradient: LinearGradient(
+            //   begin: FractionalOffset.topCenter,
+            //   end: FractionalOffset.bottomCenter,
+            //   colors: [
+            //     Colors.blue,
+            //     Colors.white,
+            //   ],
+            //   stops: [0.0, 1.0],
+            // ),
           ),
         ),
         toolbarHeight: 100,
@@ -33,13 +52,10 @@ class MainPage extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        color: Theme.of(context).accentColor,
+        color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             children: [
-              // SizedBox(
-              // height: MediaQuery.of(context).size.height * 0.05,
-              // ),
               Stack(
                 children: [
                   Container(
@@ -49,14 +65,8 @@ class MainPage extends StatelessWidget {
                         fit: BoxFit.fill,
                         image: AssetImage('lib/assets/mainPic.jpg'),
                       ),
-
-                      // backgroundBlendMode: ,
                       border: Border.all(color: Colors.black),
                     ),
-                    // child: Image.asset('lib/assets/mainPic.jpg',
-                    //     height: MediaQuery.of(context).size.height * 0.5,
-                    //     width: MediaQuery.of(context).size.width,
-                    //     fit: BoxFit.fill),
                     height: MediaQuery.of(context).size.height * 0.7,
                   ),
                 ],
@@ -66,16 +76,7 @@ class MainPage extends StatelessWidget {
                   // border: Border.all(
                   //   color: Colors.black,
                   // ),
-                  color: Colors.white,
-                  gradient: LinearGradient(
-                    begin: FractionalOffset.topCenter,
-                    end: FractionalOffset.bottomCenter,
-                    colors: [
-                      Colors.blue,
-                      Colors.grey.withOpacity(0.0),
-                    ],
-                    stops: [0.0, 1.0],
-                  ),
+                  color: Theme.of(context).primaryColor,
                 ),
 
                 // color: Theme.of(context).primaryColor,
