@@ -1,8 +1,12 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_rights/models/di.dart';
 import 'routes/routes.dart';
+import 'models/Fontsize.dart';
+import 'models/di.dart' as di;
 
 void main() {
+  di.setup();
   runApp(MyApp());
 }
 
@@ -13,6 +17,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  FontS fontSize = FontS();
+  final FontS fontS = getIt();
   @override
   void initState() {
     super.initState();
@@ -29,7 +35,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Color(0xFF5b7f31),
         textTheme: TextTheme(
           headline1: TextStyle(
-              fontSize: 40,
+              fontSize: fontSize.fontHeader,
               fontWeight: FontWeight.bold,
               color: Color(0xFF5b7f31)),
           headline2: TextStyle(
@@ -40,7 +46,10 @@ class _MyAppState extends State<MyApp> {
           headline3: TextStyle(
               fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
           headline4: TextStyle(fontSize: 16, color: Colors.blue[900]),
-          bodyText1: TextStyle(fontSize: 14, color: Colors.white),
+          bodyText1: TextStyle(
+            fontSize: fontSize.fontS,
+            color: Colors.white,
+          ),
           bodyText2: TextStyle(
               fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
         ),

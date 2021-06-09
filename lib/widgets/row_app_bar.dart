@@ -1,12 +1,19 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
+import 'package:medical_rights/models/Fontsize.dart';
 import 'package:medical_rights/routes/routes.dart';
 
-class RowAppBar extends StatelessWidget {
+class RowAppBar extends StatefulWidget {
   const RowAppBar({
     Key key,
   }) : super(key: key);
 
+  @override
+  _RowAppBarState createState() => _RowAppBarState();
+}
+
+class _RowAppBarState extends State<RowAppBar> {
+  FontS fontSize = FontS();
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -74,14 +81,8 @@ class ButtonMain extends StatelessWidget {
           Text(
             textButton,
             style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold,
-              // shadows: <Shadow>[
-              //   Shadow(
-              //     offset: Offset(0.0, 0.0),
-              //     blurRadius: 5.0,
-              //     color: Colors.white,
-              //   ),
-              // ],
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],
