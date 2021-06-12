@@ -3,7 +3,6 @@ import 'package:medical_rights/models/Fontsize.dart';
 import 'package:medical_rights/models/Scale.dart';
 import 'package:medical_rights/models/di.dart';
 import 'package:medical_rights/widgets/row_app_bar.dart';
-import 'package:js/js.dart';
 
 Scale scale;
 

@@ -20,7 +20,11 @@ class _RowAppBarState extends State<RowAppBar> {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         InkWell(
-          child: ButtonMain('דף הבית'),
+          child: Row(
+            children: [
+              ButtonMain('דף הבית', 'homePage'),
+            ],
+          ),
           onTap: () {
             Flurorouter.router.navigateTo(
               context,
@@ -30,28 +34,29 @@ class _RowAppBarState extends State<RowAppBar> {
           },
         ),
         InkWell(
-          child: ButtonMain('עיוורים ולקויי ראייה'),
+          child: ButtonMain('עיוורים ולקויי ראייה', 'visualImpaired'),
           onTap: () {
             Flurorouter.router.navigateTo(context, "/visuallyimpaired",
                 transition: TransitionType.fadeIn);
           },
         ),
         InkWell(
-          child: ButtonMain('חירשים ולקויי שמיעה'),
+          child: ButtonMain('חירשים ולקויי שמיעה', 'hearingImpaired'),
           onTap: () {
             Flurorouter.router.navigateTo(context, "/hearingimpaired",
                 transition: TransitionType.fadeIn);
           },
         ),
         InkWell(
-          child: ButtonMain('לקויות מוטוריות'),
+          child: ButtonMain('לקויות מוטוריות', 'motoricalImpaired'),
           onTap: () {
             Flurorouter.router.navigateTo(context, "/motoricalimpaired",
                 transition: TransitionType.fadeIn);
           },
         ),
         InkWell(
-          child: ButtonMain('מוגבלות שכלית\n   התפתחותית'),
+          child:
+              ButtonMain('מוגבלות שכלית\n   התפתחותית', 'developmentImpaired'),
           onTap: () {
             Flurorouter.router.navigateTo(context, "/devimpaired",
                 transition: TransitionType.fadeIn);
@@ -64,13 +69,14 @@ class _RowAppBarState extends State<RowAppBar> {
 
 class ButtonMain extends StatelessWidget {
   final String textButton;
-  const ButtonMain(this.textButton, {Key key}) : super(key: key);
+  final String icon;
+  const ButtonMain(this.textButton, this.icon, {Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.15,
-      height: MediaQuery.of(context).size.height * 0.1,
+      // height: MediaQuery.of(context).size.height * 0.1,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
       ),
@@ -78,12 +84,28 @@ class ButtonMain extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            textButton,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 40,
+                width: 30,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'lib/assets/' + icon + '.png',
+                    ),
+                  ),
+                ),
+              ),
+              Text(
+                ' ' + textButton,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ],
       ),

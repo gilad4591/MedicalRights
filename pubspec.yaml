@@ -64,6 +64,11 @@ flutter:
       - lib/assets/info.svg
       - lib/assets/equality.jpg
       - lib/assets/circleLogo.png
+      - lib/assets/motoricalImpaired.png
+      - lib/assets/visualImpaired.png
+      - lib/assets/hearingImpaired.png
+      - lib/assets/homePage.png
+      - lib/assets/developmentImpaired.png
       
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
