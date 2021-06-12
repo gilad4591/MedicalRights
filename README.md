@@ -1,16 +1,24 @@
-# medical_rights
+# Medical Rights Website 
 
-A new Flutter project.
+## Info ℹ
+This simple site incorporates the medical rights of individuals with various disabilities. 
+Each section of the site refers to the "All-Rights" website.
+In order to make the site accessible, an accessibility bar developed by Enable was used. In addition, we have created another bar that helps increase the font size.
 
-## Getting Started
+## Development 👩‍💻
+This web app built with flutter&dart on Visual Studio Code IDE.
 
-This project is a starting point for a Flutter application.
+## Tested 🧪
+Tested on Google Chrome
 
-A few resources to get you started if this is your first Flutter project:
+## Hosted 🏠
+Hosted on firebase hosting.<br>
+https://accessibility-information.web.app/#/
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screenshots 📷
+![image](https://user-images.githubusercontent.com/44448238/121790673-5132c680-cbea-11eb-8f33-ccbfb2d68e12.png)
+![image](https://user-images.githubusercontent.com/44448238/121790681-614aa600-cbea-11eb-8a7a-fba334afa19c.png)
+![image](https://user-images.githubusercontent.com/44448238/121790685-6b6ca480-cbea-11eb-8749-d284dc1953d5.png)
+![image](https://user-images.githubusercontent.com/44448238/121790696-80e1ce80-cbea-11eb-907d-5e176159c82f.png)
+![image](https://user-images.githubusercontent.com/44448238/121790702-95be6200-cbea-11eb-9097-729d2c0f3113.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
